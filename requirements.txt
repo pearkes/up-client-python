@@ -1,0 +1,2 @@
+docopt==0.5.0
+requests==0.13.6
