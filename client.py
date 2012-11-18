@@ -46,6 +46,12 @@ def get_url(id):
     return r.json, r.status_code
 
 
+def delete_url(id):
+    "Delete's a url"
+    r = requests.delete(base_url + "/url/%s" % id, headers=headers)
+    return r.json, r.status_code
+
+
 if __name__ == "__main__":
     arguments = docopt(__doc__, version='0.0.1')
     if arguments.get("list"):
@@ -54,3 +60,5 @@ if __name__ == "__main__":
         pprint.pprint(add_url(arguments["URL"]))
     if arguments.get("info"):
         pprint.pprint(get_url(arguments["ID"]))
+    if arguments.get("delete"):
+        pprint.pprint(delete_url(arguments["ID"]))
