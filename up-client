@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """A client for github.com/pearkes/up-server.
 
 Usage:
